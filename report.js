@@ -15,7 +15,7 @@ scanBtn.addEventListener("click", async () => {
   }
   try {
     show("scanning");
-    document.getElementById("scanLabel").textContent = "Scanning plugins…";
+    document.getElementById("scanLabel").textContent = "Checking plugins…";
     document.getElementById("scanCount").textContent = "0 found";
 
     const results = await scanPluginFolder();
@@ -25,7 +25,19 @@ scanBtn.addEventListener("click", async () => {
     show("report");
   } catch (err) {
     show("hero");
-    alert(`Scan error: ${err.message}`);
+    if (err.name === "SecurityError" || (err.message && err.message.toLowerCase().includes("system"))) {
+      alert(
+        "Chrome can't open that folder — it's a protected system folder.\n\n" +
+        "Try this instead:\n" +
+        "• Click 'Check my plugins' again\n" +
+        "• In the folder picker, navigate INTO the VST3 folder\n" +
+        "• Select the VST3 folder itself (don't select Program Files)\n\n" +
+        "Windows path: C:\\Program Files\\Common Files\\VST3\n" +
+        "Mac path: /Library/Audio/Plug-Ins/VST3"
+      );
+    } else {
+      alert(`Something went wrong: ${err.message}`);
+    }
   }
 });
 

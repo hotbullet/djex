@@ -133,6 +133,25 @@ body {
 .path-item--win .path-type { color: rgba(38,217,255,0.7); }
 .path-item--mac .path-type { color: rgba(114,242,161,0.7); }
 code { font-size: 11px; color: rgba(255,255,255,0.6); font-family: "SF Mono", "Fira Code", monospace; word-break: break-all; }
+.path-copy-row { display: flex; align-items: center; gap: 6px; }
+.path-copy-row code { flex: 1; }
+.copy-btn {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.copy-btn.copied { background: rgba(114,242,161,0.15); border-color: rgba(114,242,161,0.4); color: #72f2a1; }
+.path-tip { font-size: 10px; color: rgba(255,255,255,0.25); margin-top: 10px; font-style: italic; }
 
 /* ── Scanning ────────────────────────────────────────────────────── */
 .scanning {

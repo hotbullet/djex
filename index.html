@@ -48,13 +48,20 @@
             <div class="path-list">
               <div class="path-entry">
                 <span class="path-type">VST3</span>
-                <code>C:\Program Files\Common Files\VST3</code>
+                <div class="path-copy-row">
+                  <code>C:\Program Files\Common Files\VST3</code>
+                  <button class="copy-btn" data-path="C:\Program Files\Common Files\VST3">Copy</button>
+                </div>
               </div>
               <div class="path-entry">
                 <span class="path-type">VST2</span>
-                <code>C:\Program Files\VstPlugins</code>
+                <div class="path-copy-row">
+                  <code>C:\Program Files\VstPlugins</code>
+                  <button class="copy-btn" data-path="C:\Program Files\VstPlugins">Copy</button>
+                </div>
               </div>
             </div>
+            <p class="path-tip">⚠ Navigate <em>into</em> the folder before selecting it</p>
           </div>
           <div class="path-item path-item--mac">
             <div class="path-os-row">
@@ -64,13 +71,20 @@
             <div class="path-list">
               <div class="path-entry">
                 <span class="path-type">VST3</span>
-                <code>/Library/Audio/Plug-Ins/VST3</code>
+                <div class="path-copy-row">
+                  <code>/Library/Audio/Plug-Ins/VST3</code>
+                  <button class="copy-btn" data-path="/Library/Audio/Plug-Ins/VST3">Copy</button>
+                </div>
               </div>
               <div class="path-entry">
                 <span class="path-type">AU</span>
-                <code>/Library/Audio/Plug-Ins/Components</code>
+                <div class="path-copy-row">
+                  <code>/Library/Audio/Plug-Ins/Components</code>
+                  <button class="copy-btn" data-path="/Library/Audio/Plug-Ins/Components">Copy</button>
+                </div>
               </div>
             </div>
+            <p class="path-tip">⚠ Navigate <em>into</em> the folder before selecting it</p>
           </div>
         </div>
       </div>
@@ -197,5 +211,16 @@
   <script src="prices.js"></script>
   <script src="scanner.js"></script>
   <script src="report.js"></script>
+  <script>
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        navigator.clipboard.writeText(btn.dataset.path).then(() => {
+          btn.textContent = "Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 2000);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
