@@ -108,17 +108,31 @@ body {
 .cta-sub { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 12px; }
 
 .platform-paths { margin-top: 40px; }
-.paths-label { font-size: 11px; color: rgba(255,255,255,0.25); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
-.paths-grid { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.paths-label { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 14px; font-weight: 600; letter-spacing: 0.05em; }
+.paths-grid { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .path-item {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 10px;
-  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 16px 18px;
   text-align: left;
+  min-width: 240px;
+  flex: 1;
+  max-width: 300px;
 }
-.path-os { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.3); display: block; margin-bottom: 4px; }
-code { font-size: 11px; color: rgba(255,255,255,0.5); font-family: "SF Mono", "Fira Code", monospace; }
+.path-item--win { border-color: rgba(38,217,255,0.25); background: rgba(38,217,255,0.04); }
+.path-item--mac { border-color: rgba(114,242,161,0.25); background: rgba(114,242,161,0.04); }
+.path-os-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.path-os-icon { font-size: 18px; line-height: 1; }
+.path-item--win .path-os-icon { color: #26d9ff; }
+.path-item--mac .path-os-icon { color: #72f2a1; }
+.path-os { font-size: 14px; font-weight: 800; color: #fff; }
+.path-list { display: flex; flex-direction: column; gap: 8px; }
+.path-entry { display: flex; flex-direction: column; gap: 3px; }
+.path-type { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.path-item--win .path-type { color: rgba(38,217,255,0.7); }
+.path-item--mac .path-type { color: rgba(114,242,161,0.7); }
+code { font-size: 11px; color: rgba(255,255,255,0.6); font-family: "SF Mono", "Fira Code", monospace; word-break: break-all; }
 
 /* ── Scanning ────────────────────────────────────────────────────── */
 .scanning {

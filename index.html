@@ -38,15 +38,39 @@
       <p class="cta-sub">Works in Chrome and Edge · Mac &amp; PC · Free forever by <a href="https://www.getdjex.com" target="_blank" style="color:rgba(255,255,255,0.4);text-decoration:none;">djex</a></p>
 
       <div class="platform-paths" id="platformPaths">
-        <p class="paths-label">Default plugin folder locations:</p>
+        <p class="paths-label">Where's my plugin folder?</p>
         <div class="paths-grid">
-          <div class="path-item">
-            <span class="path-os">Windows</span>
-            <code>C:\Program Files\Common Files\VST3</code>
+          <div class="path-item path-item--win">
+            <div class="path-os-row">
+              <span class="path-os-icon">⊞</span>
+              <span class="path-os">Windows</span>
+            </div>
+            <div class="path-list">
+              <div class="path-entry">
+                <span class="path-type">VST3</span>
+                <code>C:\Program Files\Common Files\VST3</code>
+              </div>
+              <div class="path-entry">
+                <span class="path-type">VST2</span>
+                <code>C:\Program Files\VstPlugins</code>
+              </div>
+            </div>
           </div>
-          <div class="path-item">
-            <span class="path-os">Mac</span>
-            <code>/Library/Audio/Plug-Ins/VST3</code>
+          <div class="path-item path-item--mac">
+            <div class="path-os-row">
+              <span class="path-os-icon"></span>
+              <span class="path-os">Mac</span>
+            </div>
+            <div class="path-list">
+              <div class="path-entry">
+                <span class="path-type">VST3</span>
+                <code>/Library/Audio/Plug-Ins/VST3</code>
+              </div>
+              <div class="path-entry">
+                <span class="path-type">AU</span>
+                <code>/Library/Audio/Plug-Ins/Components</code>
+              </div>
+            </div>
           </div>
         </div>
       </div>
