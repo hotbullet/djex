@@ -1,6 +1,6 @@
 # studioworth
 
-**You've spent years building your studio. Do you actually know what it's worth?**
+**What's my studio worth?**
 
 Not what you paid. Not what you remember paying. The real number — every plugin, at full list price, added up.
 
@@ -78,6 +78,16 @@ Open `index.html` in Chrome or Edge and it works.
 
 ---
 
+## Where do the prices come from?
+
+Every price in studioworth is the **MSRP list price** verified manually on [Plugin Boutique](https://www.pluginboutique.com) — the largest plugin retailer. Not sale price. Not bundle price. Not what you paid. The full list price, as published by the developer.
+
+We chose Plugin Boutique because it lists almost every major plugin with a consistent public price. If a plugin is free or bundled with a DAW, its price is $0 — it still counts toward your total plugin count.
+
+The database currently covers 133+ plugins and is updated manually. If your plugin isn't in the database yet, it shows up in the "Unrecognised" list at the bottom of your report.
+
+---
+
 ## Adding plugins to the database
 
 `prices.js` is the entire database. One object. Add a line:
@@ -94,9 +104,19 @@ Source: [Plugin Boutique](https://www.pluginboutique.com) MSRP. Never sale price
 
 ## Built by djex
 
-studioworth is a free feature of **[djex](https://www.getdjex.com)** — a tool for DJs and producers to see their entire creative life.
+studioworth is a free standalone product by **[djex](https://www.getdjex.com)** — a tool for DJs and producers to see their entire creative life.
 
-If you DJ as well as produce, there's more at www.getdjex.com.
+If you DJ as well as produce, djex packs your crates, exports to USB, and gets you CDJ-ready. Free to try. www.getdjex.com.
+
+---
+
+## Does it need internet?
+
+**studioworth: never.** The whole thing runs in your browser, reads your local files, and never makes a network request. No server. No account. No upload. You can use it with your wifi off.
+
+**djex desktop (the DJ app):** the free version needs no internet at all. If you buy a license key to unlock unlimited exports, the app connects to the internet **once** — when you type your key in for the first time. That's it. After activation it reads a local file and never phones home again. Works at a gig in a basement with no signal. Always.
+
+---
 
 **Support your local djex.**
 
