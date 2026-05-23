@@ -374,6 +374,44 @@ code { font-size: 11px; color: rgba(255,255,255,0.6); font-family: "SF Mono", "F
 }
 .djex-cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
+/* ── Sample cards section ───────────────────────────────────────── */
+.sample-section {
+  padding: 80px 0 60px;
+  background: linear-gradient(180deg, #05080d 0%, #080f1a 50%, #05080d 100%);
+  overflow: hidden;
+}
+.sample-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.sample-eyebrow {
+  text-align: center; font-size: 13px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.3); margin-bottom: 14px;
+}
+.sample-headline {
+  text-align: center; font-size: clamp(26px, 5vw, 42px);
+  font-weight: 900; line-height: 1.15; margin-bottom: 10px;
+}
+.sample-headline em { color: #b06bff; font-style: normal; }
+.sample-sub {
+  text-align: center; font-size: 14px; color: rgba(255,255,255,.35);
+  margin-bottom: 40px; letter-spacing: .02em;
+}
+.sample-scroll {
+  display: flex; gap: 20px; overflow-x: auto;
+  padding: 20px 4px 28px;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.1) transparent;
+  scroll-snap-type: x mandatory;
+}
+.sample-scroll::-webkit-scrollbar { height: 4px; }
+.sample-scroll::-webkit-scrollbar-track { background: transparent; }
+.sample-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 2px; }
+.sc-scene { scroll-snap-align: center; }
+.sample-cta { display: flex; justify-content: center; margin-top: 16px; }
+
+/* card color inheritance for art elements */
+.sc-knob { border-color: inherit; color: inherit; }
+.sc-knob-dot { background: currentColor; transform: translateX(-50%); }
+.sc-kc .sc-knob-dot,.sc-k0 .sc-knob-dot { transform: translateX(-50%) rotate(-120deg); }
+
 /* ── Site footer ────────────────────────────────────────────────── */
 .site-footer {
   text-align: center;

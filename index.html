@@ -92,6 +92,22 @@
     </div>
   </section>
 
+  <!-- ── Sample cards ─────────────────────────────────────── -->
+  <section class="sample-section" id="sampleSection">
+    <div class="sample-inner">
+      <p class="sample-eyebrow">🃏 Your card is waiting</p>
+      <h2 class="sample-headline">Every scan pulls a random card.<br>What will <em>you</em> get?</h2>
+      <p class="sample-sub">7 card types · 5 rarity tiers · 1-in-6 FOIL chance · different every time</p>
+      <div class="sample-scroll" id="sampleScroll"></div>
+      <div class="sample-cta">
+        <button class="cta-btn" id="scanBtn2">
+          <span class="cta-icon">⚡</span>
+          Check my plugins
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Scanning state ────────────────────────────────────── -->
   <section class="scanning hidden" id="scanningSection">
     <div class="scanning-inner">
@@ -211,6 +227,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="prices.js"></script>
   <script src="scanner.js"></script>
+  <script src="sample-cards.js"></script>
   <script src="report.js"></script>
   <script>
     document.querySelectorAll(".copy-btn").forEach(btn => {
